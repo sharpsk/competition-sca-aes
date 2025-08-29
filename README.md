@@ -7,23 +7,19 @@ The task is to recover the secret AES key from **simulated power traces of an un
 
 ## 📂 Contents
 - **Code**
-  - Preprocessing scripts for simulated traces.
-  - Deep learning models (MLP/CNN) for profiling attacks.
-  - Key recovery and Guessing Entropy (GE) evaluation.
-  - Correlation Power Analysis (CPA) as a baseline.
+  - Implementation of **Correlation Power Analysis (CPA)** attack using ciphertexts.
+  - Scripts to compute key-byte rankings based on correlation scores.
+  - Automated generation of sixteen output files (`byte_00.txt … byte_15.txt`) containing ranked key hypotheses.
 
 - **Deliverables**
-  - Final guessed AES key.
-  - Sixteen ranked candidate lists (`byte_00.txt … byte_15.txt`).
-
-- **Documentation**
-  - Report describing preprocessing, training process, model architecture, and evaluation.
+  - Final guessed 16-byte AES key.
+  - Ranked candidate lists for each key byte.
 
 ## ⚡ Methods Used
-- **Deep Learning (MLP/CNN)** to classify AES intermediate values under Hamming Weight leakage model.
-- **Guessing Entropy (GE)** as the evaluation metric.
-- Trace normalization and preprocessing for stable training.
-- Comparison with classical **CPA attack**.
+- **CPA (Correlation Power Analysis)** applied directly using ciphertext values.
+- Hamming Weight (HW) model used for leakage hypothesis.
+- No preprocessing applied — traces were used as provided.
+- Attack targeted the last round of AES using ciphertexts.
 
 ## 📖 Competition Reference
-IIT Kharagpur SCA Competition 2025 (Online Phase: till Aug 30).  
+IIT Kharagpur SCA Competition 2025 (Online Phase: till Aug 30).
