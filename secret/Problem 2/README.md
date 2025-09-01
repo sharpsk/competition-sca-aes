@@ -46,15 +46,3 @@ Two attempts were made:
 Neither matched the true secret key.  
 
 ---
-
-## Deliverables
-This folder contains:
-- `byte_00.txt` to `byte_15.txt` — ranked candidate lists for each byte.  
-- `recovered_key.txt` — recovered 10th-round key.  
-- `master_key.txt` — reconstructed AES-128 master key.  
-- Diagnostic plots (alignment, smoothing, SVD, per-byte correlation).  
-- `preprocessing_report.txt` — preprocessing details.  
-- `cpa_attack_real.py` — attack code.  
-- `report.pdf` — full analysis report.  
-
----
