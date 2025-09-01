@@ -1,25 +1,49 @@
-# competition-sca-aes
+# Bit by Bit Side Channel Hackathon 2025  
+## AES Key Recovery via Side Channel Analysis
 
-# IIT Kharagpur SCA Competition 2025 – Problem 1 (Simulated AES Traces)
+This repository contains our submission for the **Bit by Bit Side Channel Hackathon 2025**.  
+We tackled two problems involving side-channel analysis of AES encryption.  
 
-This repository contains our solution for **Problem 1** of the IIT Kharagpur Side-Channel Analysis (SCA) Competition 2025.  
-The task is to recover the secret AES key from **simulated power traces of an unmasked AES implementation**.
+Our approaches were based primarily on **Correlation Power Analysis (CPA)** with minimal preprocessing (Problem 1) and extended preprocessing pipelines (Problem 2).  
 
-## 📂 Contents
-- **Code**
-  - Implementation of **Correlation Power Analysis (CPA)** attack using ciphertexts.
-  - Scripts to compute key-byte rankings based on correlation scores.
-  - Automated generation of sixteen output files (`byte_00.txt … byte_15.txt`) containing ranked key hypotheses.
+---
 
-- **Deliverables**
-  - Final guessed 16-byte AES key.
-  - Ranked candidate lists for each key byte.
+## Repository Structure
+secret/
+│── problem1/ → Solution for Problem 1 (simulated traces, successful key recovery)
+│── problem2/ → Solution for Problem 2 (real traces, preprocessing + CPA, partial results)
+│── README.md → Main repository README (this file)
 
-## ⚡ Methods Used
-- **CPA (Correlation Power Analysis)** applied directly using ciphertext values.
-- Hamming Weight (HW) model used for leakage hypothesis.
-- No preprocessing applied — traces were used as provided.
-- Attack targeted the last round of AES using ciphertexts.
+---
 
-## 📖 Competition Reference
-IIT Kharagpur SCA Competition 2025 (Online Phase: till Aug 30).
+## Problems Overview
+
+### 🔹 Problem 1 — Simulated AES Power Traces
+- Dataset: 5,000 traces (ciphertext + simulated power values)  
+- Approach: CPA with Hamming Weight leakage model  
+- Result: **✅ Successfully recovered AES-128 key**  
+- See [`problem1/README.md`](./problem1/README.md) for details  
+
+---
+
+### 🔹 Problem 2 — Real AES Power Traces
+- Dataset: Real measured traces (plaintext + ciphertext + power samples)  
+- Approach: Preprocessing (alignment, normalization, denoising) + CPA  
+- Result: **❌ Key recovery unsuccessful** (candidate keys derived but mismatched)  
+- See [`problem2/README.md`](./problem2/README.md) for details  
+
+---
+
+## Team
+- **Surya K**  
+- **Renita J**  
+- Advisor: Ms. Suganya A  
+
+---
+
+## Notes
+- Attack scripts are provided in both problem folders.  
+- All ranked key byte files are included (`byte_00.txt` → `byte_15.txt`).  
+- Reports are documented in detail and reproducible with the provided code.  
+
+---
