@@ -23,11 +23,4 @@ Steps:
 
 ---
 
-## Results
-- **Recovered 10th Round Key:** `D014F9A8C9EE2589E13F0CC8B6630CA6`  
-- **Recovered Final AES-128 Key:** `2B7E151628AED2A6ABF7158809CF4F3C`  
-
-Average correlation across bytes: **~0.22**, indicating very high confidence.  
-
----
 
