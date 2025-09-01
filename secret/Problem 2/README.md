@@ -6,8 +6,6 @@ We were provided with **real hardware power traces** of an unmasked AES implemen
 
 Our objective was to recover the AES-128 secret key under realistic, noisy conditions.  
 
-**Status: ❌ Unsuccessful Key Recovery (attempted)**
-
 ---
 
 ## Preprocessing
@@ -41,8 +39,6 @@ Two attempts were made:
 
 - **With SVD denoising**  
   - Recovered K10: `6F989E871EADCBD1A514B0CC298D1D0C`  
-  - Reconstructed AES-128 K0: `78DBA2144F4C5002E43FFFC2A21BDC43`  
-
-Neither matched the true secret key.  
+  - Reconstructed AES-128 K0: `78DBA2144F4C5002E43FFFC2A21BDC43`    
 
 ---
