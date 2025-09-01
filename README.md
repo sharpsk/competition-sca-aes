@@ -10,6 +10,7 @@ Our approaches were based primarily on **Correlation Power Analysis (CPA)** with
 
 ## Repository Structure
 secret/
+
 │── problem1/ → Solution for Problem 1 (simulated traces, successful key recovery)
 
 │── problem2/ → Solution for Problem 2 (real traces, preprocessing + CPA, partial results)
