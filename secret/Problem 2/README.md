@@ -30,15 +30,3 @@ The real traces contained misalignments and noise, so the following preprocessin
 
 ---
 
-## Results
-Two attempts were made:  
-
-- **Without SVD denoising**  
-  - Recovered K10: `99989E871EADCBD1A51431BB298D1D0C`  
-  - Reconstructed AES-128 K0: `824E888CF0AD1CC6FF0C850FD37D27F9`  
-
-- **With SVD denoising**  
-  - Recovered K10: `6F989E871EADCBD1A514B0CC298D1D0C`  
-  - Reconstructed AES-128 K0: `78DBA2144F4C5002E43FFFC2A21BDC43`    
-
----
