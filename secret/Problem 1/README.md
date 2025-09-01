@@ -6,8 +6,6 @@ We were provided with **5,000 simulated side-channel power traces** of an unmask
 
 Our objective was to recover the 128-bit AES secret key using side-channel analysis.  
 
-**Status: ✅ Successful Key Recovery**
-
 ---
 
 ## Methodology
@@ -31,15 +29,5 @@ Steps:
 
 Average correlation across bytes: **~0.22**, indicating very high confidence.  
 
-All 16 key bytes were successfully recovered.  
-
 ---
 
-## Deliverables
-This folder contains:
-- `byte_00.txt` to `byte_15.txt` — ranked candidate lists for each byte.  
-- `final_key.txt` — recovered AES key.  
-- `cpa_attack.py` — Python script used to perform the attack.  
-- `report.pdf` — full analysis report.  
-
----
